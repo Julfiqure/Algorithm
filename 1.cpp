@@ -1,21 +1,53 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-//Functions
-//-->Recursive function
-//-->Library Function-->math.h
-//-->user defined
-//f(a,b)=2*(a+b)
-//dereferencing operator==*;
-//cout<<Address (x+i)<<" "<<value *(x+i)<<" "<<value x[i];
-
-int f(int x,int y)
+int **matrix(int r,int c)
 {
-    return 2*(x+y);
+    int **m=new int*[r];
+     for(int i=0;i<r;i++)
+    {
+        m[i]=new int[c];
+    }
+    return m;
 }
+
+void inputdata(int **s,int row,int c)
+{
+    for(int i=0;i<row;i++)
+    {
+        for(int j=0;j<c;j++)
+        {
+            cin>>s[i][j];
+        }
+    }
+}
+
+void printdata(int **d,int row,int column)
+{
+    for(int i=0;i<row;i++)
+    {
+        for(int j=0;j<column;j++)
+        {
+            cout<<d[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+
 
 int main()
 {
-    cout<<f(10,1)<<endl;
+    int row,column;
+    cin>>row>>column;
+    int **m=matrix(row,column);
+
+
+
+
+    inputdata(m,row,column);
+    printdata(m,row,column);
+
+
+
     return 0;
 }

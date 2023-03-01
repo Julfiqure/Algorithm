@@ -1,19 +1,24 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
-
-int f(int *x,int n)
-{
-    int sum=0;
-    for(int i=0;i<n;i++)
-    {
-        sum=sum+x[i];
-    }
-    return sum;
-}
 
 int main()
 {
-    int a[]={10,20,30,40};
-    cout<<f(a,4)<<endl;
+    int s,t;
+    cin>>s;
+
+   int *a=new int[s];
+
+
+   for(int i=0;i<s;i++)
+   {
+           a[i]=10;
+   }
+
+   for(int i=0;i<s;i++)
+   {
+           cout<<a[i]<<"  ";
+   }
+
+
     return 0;
 }
